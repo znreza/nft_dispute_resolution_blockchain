@@ -3,7 +3,9 @@ from pyteal import *
 #Adapted from:  https://github.com/algorand/pyteal/blob/master/examples/application/vote.py
 
 """
-The following code allows the arbitrators to vote for or agaisnt the Artist who initiated the dispute resolution claim. Each arbitrator's voting status (Voted or Not Voted) is added to global storage. If the vote is for the Artist, an increment is added to Artist's local storage. If the vote is against the Artist, an increment is added to the alleged Offender's local storage.
+The following code allows the arbitrators to vote for or agaisnt the Artist who initiated the dispute resolution claim. Each arbitrator's 
+voting status (Voted or Not Voted) is added to global storage. If the vote is for the Artist, an increment is added to Artist's local storage.
+If the vote is against the Artist, an increment is added to the alleged Offender's local storage.
 """
 
 def approval_program():
