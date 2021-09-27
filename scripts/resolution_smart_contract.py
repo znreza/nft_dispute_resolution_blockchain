@@ -13,7 +13,8 @@ from algosdk import template
 
 # Adapted from: https://developer.algorand.org/tutorials/create-and-test-smart-contracts-using-python/
 
-""" The following code splits the stake coming from the Artist's account between two arbitrators. In future, we will extend this code to allow splitting transaction between more arbitrators.
+""" The following code splits the stake coming from the Artist's account between two arbitrators. In future, we will extend this code
+to allow splitting transaction between more arbitrators.
 """
 
 def _create_split_contract(
