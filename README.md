@@ -35,10 +35,12 @@ In Resolutio platform, A has the liberty to have their issue heard and resolved 
 - The stake sent from artist A will be splitted between the selected arbitrators. However, the group transaction will not be complete until all the arbitrators cast their votes **for** or **against** the artist. The artist can take their stake back at any times before the group transaction is complete.
 - Majority vote will decide who won the resolution case. If the artist A wins, either the NFT has to be returned, burnt or A will have to be compensated through Algorand Standard Asset (ASA). 
 
+## How is IPFS/Filecoin used in this project?
+We have used IPFS storage to securely store the Dispute Resolution claim evidence and securely share them with the selected arbiters. We used nft.storage as the decentralised storage. Below is an example of our evidence file in nft.storage.
+https://bafybeiclpu3wxd2pjcr5e2ebltznddbxabvdog6hyigqnnpafegvmkjnlm.ipfs.dweb.link/
+
 
 ## Codebase 
-The /scripts directory contains scripts for the base smart contract and arbitration voting of a simpler and basic version of the proposed mechanism. 
-- **resolutio_smart_contract.py** is the script for the artist to use for initiating the dispute resolution. The artist will connect their wallet using AlgodClient and specify the transaction amount and the number of arbitrators amongst whome the amount will be splitted. create_split_transaction() function will make sure the amount is properly splitted between the arbitrators only if all of them finish casting their votes. Right now the logic for vote casting checking has not been implemented due to time constraint. 
-- **arbitration_voting.py** is the script for the arbitrators to cast their votes either for or against the artist. Each arbitrator's 
-voting status (Voted or Not Voted) is added to global storage. If the vote is for the Artist, an increment is added to Artist's local storage.
-If the vote is against the Artist, an increment is added to the alleged Offender's local storage. 
+
+- **apps** app/ directory contains the scripts for the prototype. Please run **index.html** to get started.
+- **codes** codes/ directory containes the codes for creating accounts, funding through Algo Dispenser and making transactions to Testnet. **nft_minting.py** is used for minting the evidence as an asset on Algorand.
